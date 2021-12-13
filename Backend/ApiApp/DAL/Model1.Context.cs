@@ -33,7 +33,7 @@ namespace DAL
         public DbSet<Order> Orders { get; set; }
         public DbSet<Package> Packages { get; set; }
         public DbSet<Rating> Ratings { get; set; }
-        public DbSet<sysdiagram> sysdiagrams { get; set; }
+        public DbSet<Token> Tokens { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Voucherentry> Voucherentries { get; set; }
         public DbSet<Voucher> Vouchers { get; set; }

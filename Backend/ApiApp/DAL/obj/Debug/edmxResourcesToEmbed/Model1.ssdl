@@ -95,15 +95,15 @@
     <Property Name="complain" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="complainstatus" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
-  <EntityType Name="sysdiagrams">
+  <EntityType Name="Tokens">
     <Key>
-      <PropertyRef Name="diagram_id" />
+      <PropertyRef Name="Id" />
     </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userid" Type="int" Nullable="false" />
+    <Property Name="AccessToken" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+    <Property Name="ExpiredAt" Type="datetime" />
   </EntityType>
   <EntityType Name="Users">
     <Key>
@@ -219,18 +219,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Orders_Packages">
-    <End Role="Packages" Type="Self.Packages" Multiplicity="1" />
-    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Packages">
-        <PropertyRef Name="packageid" />
-      </Principal>
-      <Dependent Role="Orders">
-        <PropertyRef Name="packageid" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Orders_Sellers">
     <End Role="Users" Type="Self.Users" Multiplicity="1" />
     <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
@@ -275,6 +263,18 @@
         <PropertyRef Name="userid" />
       </Principal>
       <Dependent Role="Ratings">
+        <PropertyRef Name="userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tokens_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Tokens" Type="Self.Tokens" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="Tokens">
         <PropertyRef Name="userid" />
       </Dependent>
     </ReferentialConstraint>
@@ -324,7 +324,7 @@
     <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Packages" EntityType="Self.Packages" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Ratings" EntityType="Self.Ratings" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tokens" EntityType="Self.Tokens" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Voucherentries" EntityType="Self.Voucherentries" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Vouchers" EntityType="Self.Vouchers" Schema="dbo" store:Type="Tables" />
@@ -356,10 +356,6 @@
       <End Role="Users" EntitySet="Users" />
       <End Role="Orders" EntitySet="Orders" />
     </AssociationSet>
-    <AssociationSet Name="FK_Orders_Packages" Association="Self.FK_Orders_Packages">
-      <End Role="Packages" EntitySet="Packages" />
-      <End Role="Orders" EntitySet="Orders" />
-    </AssociationSet>
     <AssociationSet Name="FK_Orders_Sellers" Association="Self.FK_Orders_Sellers">
       <End Role="Users" EntitySet="Users" />
       <End Role="Orders" EntitySet="Orders" />
@@ -375,6 +371,10 @@
     <AssociationSet Name="FK_Ratings_Users" Association="Self.FK_Ratings_Users">
       <End Role="Users" EntitySet="Users" />
       <End Role="Ratings" EntitySet="Ratings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tokens_Users" Association="Self.FK_Tokens_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Tokens" EntitySet="Tokens" />
     </AssociationSet>
     <AssociationSet Name="FK_Voucherentries_Users" Association="Self.FK_Voucherentries_Users">
       <End Role="Users" EntitySet="Users" />

@@ -25,6 +25,7 @@ namespace DAL
             this.Orders1 = new HashSet<Order>();
             this.Packages = new HashSet<Package>();
             this.Ratings = new HashSet<Rating>();
+            this.Tokens = new HashSet<Token>();
             this.Voucherentries = new HashSet<Voucherentry>();
             this.Vouchers = new HashSet<Voucher>();
         }
@@ -47,6 +48,7 @@ namespace DAL
         public virtual ICollection<Order> Orders1 { get; set; }
         public virtual ICollection<Package> Packages { get; set; }
         public virtual ICollection<Rating> Ratings { get; set; }
+        public virtual ICollection<Token> Tokens { get; set; }
         public virtual ICollection<Voucherentry> Voucherentries { get; set; }
         public virtual ICollection<Voucher> Vouchers { get; set; }
     }

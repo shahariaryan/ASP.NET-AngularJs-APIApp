@@ -20,5 +20,9 @@ namespace BEL
         public string totalprice { get; set; }
         public System.DateTime createdat { get; set; }
         public string status { get; set; }
+
+        public virtual UserModel User { get; set; }
+        public virtual PackageModel Package { get; set; }
+        public virtual UserModel User1 { get; set; }
     }
 }

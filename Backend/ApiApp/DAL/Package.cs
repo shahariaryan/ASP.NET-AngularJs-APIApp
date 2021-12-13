@@ -16,7 +16,6 @@ namespace DAL
     {
         public Package()
         {
-            this.Orders = new HashSet<Order>();
             this.Ratings = new HashSet<Rating>();
         }
     
@@ -32,7 +31,6 @@ namespace DAL
         public string location { get; set; }
         public string approvestatus { get; set; }
     
-        public virtual ICollection<Order> Orders { get; set; }
         public virtual User User { get; set; }
         public virtual ICollection<Rating> Ratings { get; set; }
     }

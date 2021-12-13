@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    class UserRepo : IRepo<User, int, string, string>
+    public class UserRepo : IRepository<User, int, string>, IAuth
     {
 
         ApiAppEntities db;
@@ -17,10 +17,13 @@ namespace DAL
 
         public void AddUser(User u)
         {
+            
             db.Users.Add(u);
             db.SaveChanges();
 
         }
+
+       
 
         public void DeleteUser(int id)
         {
@@ -56,14 +59,40 @@ namespace DAL
             return db.Users.FirstOrDefault(e => e.userid == id);
         }
 
-        public User GetUserLogin(string email, string password)
+        public Token Authenticate(User user)
         {
-            var usercheck = db.Users.FirstOrDefault(e => e.email == email && e.password == password);
-            if (usercheck != null)
+            var u = db.Users.FirstOrDefault(en => en.email.Equals(user.email) && en.password.Equals(user.password));
+            Token t = null;
+            if (u != null) 
             {
-                return usercheck;
+                string token = Guid.NewGuid().ToString();
+                t = new Token();
+                t.userid = u.userid;
+                t.AccessToken = token;
+                t.CreatedAt = DateTime.Now;
+                db.Tokens.Add(t);
+                db.SaveChanges();
+
             }
-            return null;
+            return t;
+        }
+
+        public bool IsAuthenticated(string token)
+        {
+            var rs = db.Tokens.Any(e => e.AccessToken.Equals(token) && e.ExpiredAt == null);
+            return rs;
+        }
+
+        public bool Logout(string token)
+        {
+            var t = db.Tokens.FirstOrDefault(e => e.AccessToken.Equals(token));
+            if (t != null)
+            {
+                t.ExpiredAt = DateTime.Now;
+                db.SaveChanges();
+                return true;
+            }
+            return false;
         }
     }
 }

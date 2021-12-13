@@ -19,5 +19,7 @@ namespace BEL
         public string advertisement { get; set; }
         public string location { get; set; }
         public string approvestatus { get; set; }
+
+        public virtual UserModel User { get; set; }
     }
 }

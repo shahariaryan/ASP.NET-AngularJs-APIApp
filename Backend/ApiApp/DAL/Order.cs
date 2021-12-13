@@ -28,7 +28,6 @@ namespace DAL
         public string status { get; set; }
     
         public virtual User User { get; set; }
-        public virtual Package Package { get; set; }
         public virtual User User1 { get; set; }
     }
 }

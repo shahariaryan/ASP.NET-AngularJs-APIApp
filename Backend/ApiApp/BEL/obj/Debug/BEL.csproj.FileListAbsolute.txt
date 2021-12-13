@@ -10,3 +10,9 @@ Z:\Study\.net\Project_Work\Fall21_.Net_A_PMT-main\ApiApp\BEL\obj\Debug\BEL.dll
 Z:\Study\.net\Project_Work\Fall21_.Net_A_PMT-main\ApiApp\BEL\obj\Debug\BEL.pdb
 Z:\Study\.net\Project_Work\Fall21_.Net_A_PMT-main\ApiApp\BEL\bin\Debug\BEL.dll
 Z:\Study\.net\Project_Work\Fall21_.Net_A_PMT-main\ApiApp\BEL\bin\Debug\BEL.pdb
+Z:\Study\.net\Project_Work\Backend\ApiApp\BEL\bin\Debug\BEL.dll
+Z:\Study\.net\Project_Work\Backend\ApiApp\BEL\bin\Debug\BEL.pdb
+Z:\Study\.net\Project_Work\Backend\ApiApp\BEL\obj\Debug\BEL.csproj.AssemblyReference.cache
+Z:\Study\.net\Project_Work\Backend\ApiApp\BEL\obj\Debug\BEL.csproj.CoreCompileInputs.cache
+Z:\Study\.net\Project_Work\Backend\ApiApp\BEL\obj\Debug\BEL.dll
+Z:\Study\.net\Project_Work\Backend\ApiApp\BEL\obj\Debug\BEL.pdb

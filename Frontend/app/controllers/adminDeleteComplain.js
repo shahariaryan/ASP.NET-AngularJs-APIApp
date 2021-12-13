@@ -1,0 +1,37 @@
+app.controller(
+    "adminDeleteComplain",
+    function ($scope, $http, ajax, $location, $routeParams, $rootScope) {
+    $rootScope.PageType = "admin";
+  
+      if ($rootScope.UserType != "Admin") {
+        $location.path("/");
+        return;
+      }
+      var id = $routeParams.id;
+      ajax.get(API_PORT + "api/complains/" + id, success, error);
+      function success(response) {
+        $scope.complain = response.data;
+        // console.log(response.data);
+      }
+      function error(error) {
+        console.log(error);
+      }
+  
+      $scope.deleteComplain = function (complain) {
+        if(confirm('Are you sure your want to delete?')) {
+          ajax.delete(
+            API_PORT + "api/complains/delete/" + complain.ratingid,
+            complain,
+            function (response) {
+              // console.log(response);
+              $location.path("/admin/viewcomplains");
+            },
+            function (err) {
+              console.log(err);
+            }
+          );
+        }
+      };
+    }
+  );
+  

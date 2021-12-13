@@ -18,3 +18,13 @@ Z:\Study\.net\Project_Work\Fall21_.Net_A_PMT-main\ApiApp\DAL\obj\Debug\DAL.cspro
 Z:\Study\.net\Project_Work\Fall21_.Net_A_PMT-main\ApiApp\DAL\obj\Debug\DAL.csproj.CopyComplete
 Z:\Study\.net\Project_Work\Fall21_.Net_A_PMT-main\ApiApp\DAL\obj\Debug\DAL.dll
 Z:\Study\.net\Project_Work\Fall21_.Net_A_PMT-main\ApiApp\DAL\obj\Debug\DAL.pdb
+Z:\Study\.net\Project_Work\Backend\ApiApp\DAL\bin\Debug\DAL.dll.config
+Z:\Study\.net\Project_Work\Backend\ApiApp\DAL\bin\Debug\DAL.dll
+Z:\Study\.net\Project_Work\Backend\ApiApp\DAL\bin\Debug\DAL.pdb
+Z:\Study\.net\Project_Work\Backend\ApiApp\DAL\bin\Debug\EntityFramework.dll
+Z:\Study\.net\Project_Work\Backend\ApiApp\DAL\bin\Debug\EntityFramework.xml
+Z:\Study\.net\Project_Work\Backend\ApiApp\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+Z:\Study\.net\Project_Work\Backend\ApiApp\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+Z:\Study\.net\Project_Work\Backend\ApiApp\DAL\obj\Debug\DAL.csproj.CopyComplete
+Z:\Study\.net\Project_Work\Backend\ApiApp\DAL\obj\Debug\DAL.dll
+Z:\Study\.net\Project_Work\Backend\ApiApp\DAL\obj\Debug\DAL.pdb

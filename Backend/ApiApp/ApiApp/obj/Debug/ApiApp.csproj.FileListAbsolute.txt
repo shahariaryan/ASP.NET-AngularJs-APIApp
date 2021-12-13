@@ -232,3 +232,6 @@ Z:\Study\.net\Project_Work\Backend\ApiApp\ApiApp\obj\Debug\ApiApp.csproj.CoreCom
 Z:\Study\.net\Project_Work\Backend\ApiApp\ApiApp\obj\Debug\ApiApp.csproj.CopyComplete
 Z:\Study\.net\Project_Work\Backend\ApiApp\ApiApp\obj\Debug\ApiApp.dll
 Z:\Study\.net\Project_Work\Backend\ApiApp\ApiApp\obj\Debug\ApiApp.pdb
+Z:\Study\.net\Project_Work\Backend\ApiApp\ApiApp\bin\System.Web.Cors.dll
+Z:\Study\.net\Project_Work\Backend\ApiApp\ApiApp\bin\System.Web.Http.Cors.dll
+Z:\Study\.net\Project_Work\Backend\ApiApp\ApiApp\bin\System.Web.Http.Cors.xml

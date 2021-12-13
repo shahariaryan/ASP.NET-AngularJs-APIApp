@@ -79,16 +79,6 @@ namespace BLL
             DataAccessFactory.UserDataAcess().DeleteUser(id);
         }
 
-        // public static User GetUserlogin(string email, string password)
-        //{
-        //   var config = new MapperConfiguration(c =>
-        //  {
-        //     c.CreateMap<UserModel, User>();
-        // });
-        //  var mapper = new Mapper(config);
-        //  var da = DataAccessFactory.UserDataAcess();
-        //   var data = mapper.Map<User>(da.GetUserlogin(email, password));
-        //return data;
-        //}
+        
     }
 }
