@@ -63,8 +63,8 @@
     <Property Name="packageid" Type="int" Nullable="false" />
     <Property Name="ordername" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="paytype" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="quantity" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="totalprice" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="quantity" Type="int" Nullable="false" />
+    <Property Name="totalprice" Type="float" Nullable="false" />
     <Property Name="createdat" Type="datetime" Nullable="false" />
     <Property Name="status" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
@@ -207,7 +207,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Orders_Customers">
+  <Association Name="FK_Orders_customer">
     <End Role="Users" Type="Self.Users" Multiplicity="1" />
     <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
     <ReferentialConstraint>
@@ -219,7 +219,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Orders_Sellers">
+  <Association Name="FK_Orders_Seller">
     <End Role="Users" Type="Self.Users" Multiplicity="1" />
     <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
     <ReferentialConstraint>
@@ -352,11 +352,11 @@
       <End Role="Users" EntitySet="Users" />
       <End Role="Notices" EntitySet="Notices" />
     </AssociationSet>
-    <AssociationSet Name="FK_Orders_Customers" Association="Self.FK_Orders_Customers">
+    <AssociationSet Name="FK_Orders_customer" Association="Self.FK_Orders_customer">
       <End Role="Users" EntitySet="Users" />
       <End Role="Orders" EntitySet="Orders" />
     </AssociationSet>
-    <AssociationSet Name="FK_Orders_Sellers" Association="Self.FK_Orders_Sellers">
+    <AssociationSet Name="FK_Orders_Seller" Association="Self.FK_Orders_Seller">
       <End Role="Users" EntitySet="Users" />
       <End Role="Orders" EntitySet="Orders" />
     </AssociationSet>

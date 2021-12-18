@@ -23,7 +23,7 @@ namespace DAL
 
             if (price != null)
             {
-                var sum = Convert.ToInt32(price);
+                var sum = Convert.ToInt32(price.Sum());
                 dash = new Array[sum];
                 return dash;
             }

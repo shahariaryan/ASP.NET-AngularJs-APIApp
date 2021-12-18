@@ -6,7 +6,7 @@ app.factory("intercepror",function($location){
             return config;
         },
         'responseError':function(rejection){
-
+            $location.path("/login");
         }
     }
 });

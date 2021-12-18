@@ -22,8 +22,8 @@ namespace DAL
         public int packageid { get; set; }
         public string ordername { get; set; }
         public string paytype { get; set; }
-        public string quantity { get; set; }
-        public string totalprice { get; set; }
+        public int quantity { get; set; }
+        public double totalprice { get; set; }
         public System.DateTime createdat { get; set; }
         public string status { get; set; }
     

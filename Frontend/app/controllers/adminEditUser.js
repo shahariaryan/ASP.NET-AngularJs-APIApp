@@ -9,7 +9,7 @@ app.controller(
       }
       var id = $routeParams.id;
       $scope.statuses = ["Valid", "Invalid", "Banned"];
-      ajax.get(API_PORT + "api/users/" + id, success, error);
+      ajax.get("https://localhost:44336/api/users/" + id, success, error);
       function success(response) {
         $scope.user = response.data;
         console.log(response.data);
@@ -18,7 +18,7 @@ app.controller(
   
       $scope.editUser = function (user) {
         ajax.put(
-          API_PORT + "api/users/edit",
+          "https://localhost:44336/api/users/edit",
           user,
           function (response) {
             console.log(response);

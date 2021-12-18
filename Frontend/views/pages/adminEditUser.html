@@ -14,7 +14,7 @@
                 >
                   <div class="form-group">
                     <label for="name" class="control-label col-lg-2"
-                      >Full Name <span class="required">*</span></label
+                      >Full Name <span class="required"></span></label
                     >
                     <div class="col-lg-10">
                       <input
@@ -32,7 +32,7 @@
                   </div>
                   <div class="form-group">
                     <label for="status" class="control-label col-lg-2"
-                      >Status <span class="required">*</span></label
+                      >Status <span class="required"></span></label
                     >
                     <div class="col-lg-10">
                       <select
@@ -42,15 +42,7 @@
                       class="form-control form-control-line"
                       required
                     ></select>
-                      <!-- <select
-                        ng-model="user.status"
-                        name="status"
-                        class="form-control form-control-line"
-                        required
-                      >
-                        <option value="Active">Active</option>
-                        <option value="Inactive">Inactive</option>
-                      </select> -->
+
                       <span class="text-danger" ng-show="myForm.status.$touched && myForm.status.$error.required"
                         >Status is required.</span
                       >
@@ -58,7 +50,7 @@
                   </div>
                   <div class="form-group">
                     <label for="email" class="control-label col-lg-2"
-                      >E-Mail <span class="required">*</span></label
+                      >E-Mail <span class="required"></span></label
                     >
                     <div class="col-lg-10">
                       <input
@@ -76,7 +68,7 @@
                   </div>
                   <div class="form-group">
                     <label for="password" class="control-label col-lg-2"
-                      >Password <span class="required">*</span></label
+                      >Password <span class="required"></span></label
                     >
                     <div class="col-lg-10">
                       <input
@@ -92,27 +84,10 @@
                       >
                     </div>
                   </div>
-                  <div class="form-group">
-                    <label for="image" class="control-label col-lg-2"
-                      >Image <span class="required">*</span></label
-                    >
-                    <div class="col-lg-10">
-                      <input
-                        ng-model="user.image"
-                        class="form-control"
-                        id="image"
-                        name="image"
-                        type="text"
-                        required
-                      />
-                      <span class="text-danger" ng-show="myForm.image.$touched && myForm.image.$error.required"
-                        >Image is required.</span
-                      >
-                    </div>
-                  </div>
+                 
                   <div class="form-group">
                     <label for="number" class="control-label col-lg-2"
-                      >Phone Number <span class="required">*</span></label
+                      >Phone Number <span class="required"></span></label
                     >
                     <div class="col-lg-10">
                       <input
@@ -130,10 +105,10 @@
                   </div>
                   <div class="form-group">
                     <div class="col-lg-offset-2 col-lg-10">
-                      <button class="btn btn-primary" type="submit">
+                      <button class="btn btn-success" type="submit">
                         Edit User
                       </button>
-                      <a href="#!/admin/viewusers" class="btn btn-default" type="button">
+                      <a href="#!/admin/viewusers" class="btn btn-danger" type="button">
                         Cancel
                       </a>
                     </div>

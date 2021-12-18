@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="498fe8c676b742ee9eead44692ab49d2" Name="Diagram1">
+      <Diagram DiagramId="839c1f3ce139496d8584e7e1454ffdac" Name="Diagram1">
         <EntityTypeShape EntityType="ApiAppModel.Account" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
         <EntityTypeShape EntityType="ApiAppModel.Action" Width="1.5" PointX="3.75" PointY="10.25" IsExpanded="true" />
         <EntityTypeShape EntityType="ApiAppModel.Auditlog" Width="1.5" PointX="6" PointY="15.625" IsExpanded="true" />
@@ -23,8 +23,8 @@
         <AssociationConnector Association="ApiAppModel.FK_Auditlogs_Users" ManuallyRouted="false" />
         <AssociationConnector Association="ApiAppModel.FK_Blogs_Users" ManuallyRouted="false" />
         <AssociationConnector Association="ApiAppModel.FK_Notices_Users" ManuallyRouted="false" />
-        <AssociationConnector Association="ApiAppModel.FK_Orders_Customers" ManuallyRouted="false" />
-        <AssociationConnector Association="ApiAppModel.FK_Orders_Sellers" ManuallyRouted="false" />
+        <AssociationConnector Association="ApiAppModel.FK_Orders_customer" ManuallyRouted="false" />
+        <AssociationConnector Association="ApiAppModel.FK_Orders_Seller" ManuallyRouted="false" />
         <AssociationConnector Association="ApiAppModel.FK_Packages_Users" ManuallyRouted="false" />
         <AssociationConnector Association="ApiAppModel.FK_Ratings_Packages" ManuallyRouted="false" />
         <AssociationConnector Association="ApiAppModel.FK_Ratings_Users" ManuallyRouted="false" />

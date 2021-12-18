@@ -26,7 +26,8 @@ app.controller("SellerPackageEdit", function ($scope, $http, ajax, $routeParams)
         ajax.post("https://localhost:44336/api/Package/edit/" + $routeParams.id, d,
             function (response) {
                 console.log(response);
-                alert("edited");
+               alert("edited");
+                $location.path("/seller/showpackages");
             },
             function (err) {
                 console.log(err);

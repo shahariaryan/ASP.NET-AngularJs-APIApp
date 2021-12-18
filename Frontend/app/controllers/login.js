@@ -24,16 +24,13 @@ app.controller("login", function ($scope, ajax, $rootScope, $location) {
           $rootScope.UserPhone = $scope.user.phone;
           $rootScope.UserEmail = $scope.user.email;
           localStorage.setItem("user", JSON.stringify($scope.user));
+          $location.path("/SellerHome");
           // console.log($rootScope.UserName);
           //set login status
           if ($scope.user.usertype == "Seller") {
-            $rootScope.isUserLoggedIn = true;
-            window.location.href = "http://127.0.0.1:5500/index.html#!/SellerHome";
+            
           }
-          else if ($scope.user.usertype == "Admin") {
-            $rootScope.isUserLoggedIn = true;
-            window.location.href = "http://127.0.0.1:5500/index.html#!/admin";
-          }
+         
         }
       },
       function (err) {

@@ -8,7 +8,7 @@ namespace BEL
 {
     public class OrderModel
     {
-        public int orderid { get; set; }
+       public int orderid { get; set; }
         public int sellerid { get; set; }
         public int customerid { get; set; }
         public string customerphone { get; set; }
@@ -16,10 +16,11 @@ namespace BEL
         public int packageid { get; set; }
         public string ordername { get; set; }
         public string paytype { get; set; }
-        public string quantity { get; set; }
-        public string totalprice { get; set; }
+        public int quantity { get; set; }
+        public double totalprice { get; set; }
         public System.DateTime createdat { get; set; }
         public string status { get; set; }
+        public string user_name { get; set; }
 
         public virtual UserModel User { get; set; }
         public virtual PackageModel Package { get; set; }

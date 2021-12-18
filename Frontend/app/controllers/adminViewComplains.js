@@ -7,7 +7,7 @@ app.controller(
         $location.path("/");
         return;
       }
-      ajax.get(API_PORT + "api/complains/all", success, error);
+      ajax.get("https://localhost:44336/api/complains/all", success, error);
       function success(response) {
         $scope.complains = response.data;
         console.log(response.data);

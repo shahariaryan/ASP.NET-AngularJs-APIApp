@@ -7,7 +7,7 @@ app.controller(
         $location.path("/");
         return;
       }
-      ajax.get(API_PORT + "api/auditlogs/all", success, error);
+      ajax.get("https://localhost:44336/api/auditlogs/all", success, error);
       function success(response) {
         $scope.auditlogs = response.data;
         $scope.auditlogs.forEach((element) => {
@@ -21,10 +21,10 @@ app.controller(
   
       $scope.search = function () {
         if ($scope.searchText === "") {
-          ajax.get(API_PORT + "api/auditlogs/all", success, error);
+          ajax.get("https://localhost:44336/api/auditlogs/all", success, error);
         } else {
           ajax.get(
-            API_PORT + "api/auditlogs/search/" + $scope.searchText,
+            "https://localhost:44336/api/auditlogs/search/" + $scope.searchText,
             function success(response) {
               $scope.auditlogs = response.data;
             },

@@ -70,12 +70,12 @@
     <Property Name="packageid" Type="Int32" Nullable="false" />
     <Property Name="ordername" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="paytype" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="quantity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="totalprice" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="quantity" Type="Int32" Nullable="false" />
+    <Property Name="totalprice" Type="Double" Nullable="false" />
     <Property Name="createdat" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="User" Relationship="Self.FK_Orders_Customers" FromRole="Orders" ToRole="Users" />
-    <NavigationProperty Name="User1" Relationship="Self.FK_Orders_Sellers" FromRole="Orders" ToRole="Users" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Orders_customer" FromRole="Orders" ToRole="Users" />
+    <NavigationProperty Name="User1" Relationship="Self.FK_Orders_Seller" FromRole="Orders" ToRole="Users" />
   </EntityType>
   <EntityType Name="Package">
     <Key>
@@ -136,8 +136,8 @@
     <NavigationProperty Name="Auditlogs1" Relationship="Self.FK_Auditlogs_Users" FromRole="Users" ToRole="Auditlogs" />
     <NavigationProperty Name="Blogs" Relationship="Self.FK_Blogs_Users" FromRole="Users" ToRole="Blogs" />
     <NavigationProperty Name="Notices" Relationship="Self.FK_Notices_Users" FromRole="Users" ToRole="Notices" />
-    <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_Customers" FromRole="Users" ToRole="Orders" />
-    <NavigationProperty Name="Orders1" Relationship="Self.FK_Orders_Sellers" FromRole="Users" ToRole="Orders" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_customer" FromRole="Users" ToRole="Orders" />
+    <NavigationProperty Name="Orders1" Relationship="Self.FK_Orders_Seller" FromRole="Users" ToRole="Orders" />
     <NavigationProperty Name="Packages" Relationship="Self.FK_Packages_Users" FromRole="Users" ToRole="Packages" />
     <NavigationProperty Name="Ratings" Relationship="Self.FK_Ratings_Users" FromRole="Users" ToRole="Ratings" />
     <NavigationProperty Name="Tokens" Relationship="Self.FK_Tokens_Users" FromRole="Users" ToRole="Tokens" />
@@ -237,7 +237,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Orders_Customers">
+  <Association Name="FK_Orders_customer">
     <End Role="Users" Type="Self.User" Multiplicity="1" />
     <End Role="Orders" Type="Self.Order" Multiplicity="*" />
     <ReferentialConstraint>
@@ -249,7 +249,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Orders_Sellers">
+  <Association Name="FK_Orders_Seller">
     <End Role="Users" Type="Self.User" Multiplicity="1" />
     <End Role="Orders" Type="Self.Order" Multiplicity="*" />
     <ReferentialConstraint>
@@ -382,11 +382,11 @@
       <End Role="Users" EntitySet="Users" />
       <End Role="Notices" EntitySet="Notices" />
     </AssociationSet>
-    <AssociationSet Name="FK_Orders_Customers" Association="Self.FK_Orders_Customers">
+    <AssociationSet Name="FK_Orders_customer" Association="Self.FK_Orders_customer">
       <End Role="Users" EntitySet="Users" />
       <End Role="Orders" EntitySet="Orders" />
     </AssociationSet>
-    <AssociationSet Name="FK_Orders_Sellers" Association="Self.FK_Orders_Sellers">
+    <AssociationSet Name="FK_Orders_Seller" Association="Self.FK_Orders_Seller">
       <End Role="Users" EntitySet="Users" />
       <End Role="Orders" EntitySet="Orders" />
     </AssociationSet>

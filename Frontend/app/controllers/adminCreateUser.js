@@ -13,7 +13,7 @@ app.controller("adminCreateUser", function ($scope, $http, ajax, $location, $roo
         $scope.passError = "Passwords Dont Match";
       }
       else {
-        ajax.post(API_PORT + "api/users/add",user,
+        ajax.post("https://localhost:44336/api/users/add",user,
         function(response){
           console.log(response);
           $location.path("/admin/viewusers")

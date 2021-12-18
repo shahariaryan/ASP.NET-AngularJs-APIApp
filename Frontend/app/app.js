@@ -1,5 +1,5 @@
 var app = angular.module("myApp", ["ngRoute"]);
-var API_PORT = "https://localhost:44336/";
+
 app.config([
   "$routeProvider",
   "$locationProvider",
@@ -36,6 +36,10 @@ app.config([
       .when("/seller/myprofile", {
         templateUrl: "views/pages/SellerProfile.html",
         controller: "SellerProfile",
+      })
+      .when("/seller/viewnotices", {
+        templateUrl: "views/pages/sellerViewNotices.html",
+        controller: "sellerViewNotices",
       })
       .when("/login", {
         templateUrl: "views/pages/login.html",

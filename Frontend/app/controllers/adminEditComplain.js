@@ -9,7 +9,7 @@ app.controller(
       }
       var id = $routeParams.id;
     
-      ajax.get(API_PORT + "api/complains/" + id, success, error);
+      ajax.get("https://localhost:44336/api/complains/" + id, success, error);
       function success(response) {
         $scope.complain = response.data;
         console.log(response.data);
@@ -18,7 +18,7 @@ app.controller(
   
       $scope.editComplain = function (complain) {
         ajax.put(
-          API_PORT + "api/complains/edit",
+          "https://localhost:44336/api/complains/edit",
           complain,
           function (response) {
             // console.log(response);

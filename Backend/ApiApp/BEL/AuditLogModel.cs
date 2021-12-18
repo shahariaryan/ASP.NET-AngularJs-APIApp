@@ -14,6 +14,9 @@ namespace BEL
         public int adminid { get; set; }
         public int userid { get; set; }
         public Nullable<int> actionid { get; set; }
+        public string user_name { get; set; }
+        public string user1_name { get; set; }
+        public string action_actionanme { get; set; }
 
         public virtual ActionModel Action { get; set; }
         public virtual UserModel User { get; set; }

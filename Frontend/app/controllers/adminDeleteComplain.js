@@ -8,7 +8,7 @@ app.controller(
         return;
       }
       var id = $routeParams.id;
-      ajax.get(API_PORT + "api/complains/" + id, success, error);
+      ajax.get("https://localhost:44336/api/complains/" + id, success, error);
       function success(response) {
         $scope.complain = response.data;
         // console.log(response.data);
@@ -20,7 +20,7 @@ app.controller(
       $scope.deleteComplain = function (complain) {
         if(confirm('Are you sure your want to delete?')) {
           ajax.delete(
-            API_PORT + "api/complains/delete/" + complain.ratingid,
+            "https://localhost:44336/api/complains/delete/" + complain.ratingid,
             complain,
             function (response) {
               // console.log(response);

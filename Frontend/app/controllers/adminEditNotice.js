@@ -11,7 +11,7 @@ app.controller(
       $scope.statuses = ["Active", "Inactive"];
       $scope.usertypes = ["Admin", "Manager", "Seller", "Customer"];
     
-      ajax.get(API_PORT + "api/notices/" + id, success, error);
+      ajax.get("https://localhost:44336/api/notices/" + id, success, error);
       function success(response) {
         $scope.notice = response.data;
         console.log(response.data);
@@ -20,7 +20,7 @@ app.controller(
   
       $scope.editNotice = function (notice) {
         ajax.put(
-          API_PORT + "api/notices/edit",
+          "https://localhost:44336/api/notices/edit",
           notice,
           function (response) {
             // console.log(response);

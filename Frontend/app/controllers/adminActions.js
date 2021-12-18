@@ -33,7 +33,7 @@ app.controller("adminActions", function ($scope, $http, ajax, $location, $route,
         "https://localhost:44336/api/users/edit",
         user,
         function (response) {
-          // console.log(response.data);
+         
           var actionType = "";
           if (response.data.status === "Valid") {
             actionType = 1;

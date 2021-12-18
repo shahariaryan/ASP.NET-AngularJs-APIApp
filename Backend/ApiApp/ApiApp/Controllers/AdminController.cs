@@ -178,15 +178,14 @@ namespace APIApp.Controllers
         }
 
         //audit
-       //[Route("api/auditlogs/add")]
-        //[HttpPost]
-       // public void AddAuditLog(AuditLogModel auditLog)
-       // {
-          //  auditLog.createdat = DateTime.Now;
-          //  auditLog.details = "ggs";
-         //   AuditLogService.AddAuditLog(auditLog);
-           
-       // }
+        [Route("api/auditlogs/add")]
+        [HttpPost]
+        public void AddAuditLog(AuditLogModel auditLog)
+        {
+            auditLog.createdat = DateTime.Now;
+            auditLog.details = "Updated";
+            AuditLogService.AddAuditLog(auditLog); 
+        }
 
         [Route("api/auditlogs/all")]
         [HttpGet]

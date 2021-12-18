@@ -10,7 +10,7 @@ app.controller(
       var id = $routeParams.id;
       $scope.statuses = ["Active", "Inactive"];
     
-      ajax.get(API_PORT + "api/vouchers/" + id, success, error);
+      ajax.get("https://localhost:44336/api/vouchers/" + id, success, error);
       function success(response) {
         $scope.voucher = response.data;
         console.log(response.data);
@@ -19,7 +19,7 @@ app.controller(
   
       $scope.editVoucher = function (voucher) {
         ajax.put(
-          API_PORT + "api/vouchers/edit",
+          "https://localhost:44336/api/vouchers/edit",
           voucher,
           function (response) {
             // console.log(response);

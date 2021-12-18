@@ -1,5 +1,5 @@
 app.controller(
-    "adminHome",
+ "adminHome",
     function ($scope, $http, ajax, $location, $routeParams, $rootScope) {
         $rootScope.UserType = "Admin";
         $rootScope.PageType = "admin";
@@ -10,10 +10,7 @@ app.controller(
         $scope.id = $rootScope.UserId;
         $scope.type = $rootScope.UserType;
   
-      if ($rootScope.UserType != "Admin") {
-       // $location.path("/");
-      }
-  
+      
       ajax.get("https://localhost:44336/api/orders/all", success, (err) => console.log(err));
       function success(response) {
         // console.log(response.data);

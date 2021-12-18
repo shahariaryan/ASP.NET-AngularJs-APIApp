@@ -8,7 +8,7 @@ app.controller(
         return;
       }
       var id = $routeParams.id;
-      ajax.get(API_PORT + "api/users/" + id, success, error);
+      ajax.get("https://localhost:44336/api/users/" + id, success, error);
       function success(response) {
         $scope.user = response.data;
         // console.log(response.data);
@@ -20,7 +20,7 @@ app.controller(
       $scope.deleteUser = function (user) {
         if(confirm('Are you sure your want to delete?')) {
           ajax.delete(
-            API_PORT + "api/users/delete/" + user.userid,
+            "https://localhost:44336/api/users/delete/" + user.userid,
             user,
             function (response) {
               // console.log(response);

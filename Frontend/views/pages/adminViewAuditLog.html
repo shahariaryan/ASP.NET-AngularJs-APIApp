@@ -8,16 +8,16 @@
             <table class="table table-striped table-advance table-hover">
               <tbody>
                 <tr>
-                  <th><i class="icon_profile"></i> Admin Name</th>
-                  <th><i class="icon_profile"></i> User Name</th>
-                  <th><i class="icon_clipboard"></i> Action Name</th>
-                  <th><i class="icon_calendar"></i> Created At</th>
+                  <th> Admin Name</th>
+                  <th> User Name</th>
+                  <th> Details</th>
+                  <th> Created At</th>
                 </tr>
                 <tr ng-repeat="auditlog in auditlogs">
                   <td>{{auditlog.user_name}}</td>
                   <td>{{auditlog.user1_name}}</td>
-                  <td>{{auditlog.action_actionanme}}</td>
-                  <td>{{auditlog.date + " " + auditlog.time}}</td>
+                  <td>{{auditlog.details}}</td>
+                  <td>{{auditlog.createdat}}</td>
                 </tr>
               </tbody>
             </table>

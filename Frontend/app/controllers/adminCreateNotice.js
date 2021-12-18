@@ -11,7 +11,7 @@ app.controller("adminCreateNotice", function ($scope, $http, ajax, $location, $r
       notice.userid = $rootScope.UserId;
       // console.log(notice);
       ajax.post(
-        API_PORT + "api/notices/add",
+        "https://localhost:44336/api/notices/add",
         notice,
         function (response) {
           console.log(response);

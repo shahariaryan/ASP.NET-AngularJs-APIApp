@@ -11,7 +11,7 @@ app.controller("adminCreateVoucher", function ($scope, $http, ajax, $location, $
       voucher.userid = $rootScope.UserId;
       // console.log(voucher);
       ajax.post(
-        API_PORT + "api/vouchers/add",
+        "https://localhost:44336/api/vouchers/add",
         voucher,
         function (response) {
           console.log(response);

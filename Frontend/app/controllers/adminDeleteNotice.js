@@ -8,7 +8,7 @@ app.controller(
         return;
       }
       var id = $routeParams.id;
-      ajax.get(API_PORT + "api/notices/" + id, success, error);
+      ajax.get("https://localhost:44336/api/notices/" + id, success, error);
       function success(response) {
         $scope.notice = response.data;
         // console.log(response.data);
@@ -20,7 +20,7 @@ app.controller(
       $scope.deleteNotice = function (notice) {
         if(confirm('Are you sure your want to delete?')) {
           ajax.delete(
-            API_PORT + "api/notices/delete/" + notice.noticeid,
+            "https://localhost:44336/api/notices/delete/" + notice.noticeid,
             notice,
             function (response) {
               // console.log(response);

@@ -8,7 +8,7 @@ app.controller(
         return;
       }
       var id = $routeParams.id;
-      ajax.get(API_PORT + "api/vouchers/" + id, success, error);
+      ajax.get("https://localhost:44336/api/vouchers/" + id, success, error);
       function success(response) {
         $scope.voucher = response.data;
         // console.log(response.data);
@@ -20,7 +20,7 @@ app.controller(
       $scope.deleteVoucher = function (voucher) {
         if (confirm("Are you sure your want to delete?")) {
           ajax.delete(
-            API_PORT + "api/vouchers/delete/" + voucher.voucherid,
+            "https://localhost:44336/api/vouchers/delete/" + voucher.voucherid,
             voucher,
             function (response) {
               // console.log(response);

@@ -14,6 +14,8 @@ namespace BEL
         public string rating1 { get; set; }
         public string complain { get; set; }
         public string complainstatus { get; set; }
+        public string package_packagename { get; set; }
+        public string user_name { get; set; }
 
         public virtual PackageModel Package { get; set; }
         public virtual UserModel User { get; set; }
