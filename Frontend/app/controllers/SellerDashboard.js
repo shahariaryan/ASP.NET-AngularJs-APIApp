@@ -1,4 +1,4 @@
-app.controller("SellerDashboard", function ($scope, $http, ajax, $rootScope) {
+app.controller("SellerDashboard", function ($scope, ajax, $rootScope) {
     ajax.get("https://localhost:44336/api/Order/GetAll/" + $rootScope.UserId, success, error);
     function success(response) {
       $scope.orders = response.data;
@@ -8,8 +8,6 @@ app.controller("SellerDashboard", function ($scope, $http, ajax, $rootScope) {
       $scope.previousMonthIncome = 0;
       $scope.currentMonth = new Date().getMonth();
       console.log($scope.currentMonth);
-      $scope.previousMonth = new Date().getMonth();
-      console.log($scope.previousMonth);
       $scope.OrderCount = 0;
   
       if ($scope.previousMonth === 0) {

@@ -1,9 +1,5 @@
-app.controller("adminCreateNotice", function ($scope, $http, ajax, $location, $rootScope) {
-    $rootScope.PageType = "admin";
-    if ($rootScope.UserType != "Admin") {
-      $location.path("/");
-      return;
-    }
+app.controller("adminCreateNotice", function ($scope, ajax, $location, $rootScope) {
+   
     $scope.statuses = ["Active", "Inactive"];
     $scope.usertypes = ["Admin", "Manager", "Seller", "Customer"];
   

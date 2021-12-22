@@ -1,6 +1,5 @@
 app.controller(
-    "sellerViewNotices",
-    function ($scope, $http, ajax, $location, $rootScope) {
+    "sellerViewNotices", function ($scope, ajax, $location, $rootScope) {
     $rootScope.PageType = "seller";
   
       if ($rootScope.UserType != "Seller") {
@@ -15,7 +14,6 @@ app.controller(
           element.date = v.toDateString();
           element.time = v.toLocaleTimeString();
         });
-        // console.log(response.data);
       }
       function error(error) {}
   

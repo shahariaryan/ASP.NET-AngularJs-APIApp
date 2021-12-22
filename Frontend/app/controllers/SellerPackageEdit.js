@@ -1,4 +1,4 @@
-app.controller("SellerPackageEdit", function ($scope, $http, ajax, $routeParams) {
+app.controller("SellerPackageEdit", function ($scope, ajax, $routeParams) {
     ajax.get("https://localhost:44336/api/Package/edit/" + $routeParams.id, success, error);
     function success(response) {
         $scope.packages = response.data;
@@ -26,8 +26,7 @@ app.controller("SellerPackageEdit", function ($scope, $http, ajax, $routeParams)
         ajax.post("https://localhost:44336/api/Package/edit/" + $routeParams.id, d,
             function (response) {
                 console.log(response);
-               alert("edited");
-                $location.path("/seller/showpackages");
+               alert("Package Edited");
             },
             function (err) {
                 console.log(err);

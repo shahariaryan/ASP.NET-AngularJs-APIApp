@@ -1,12 +1,7 @@
 app.controller(
     "adminEditNotice",
-    function ($scope, $http, ajax, $location, $routeParams, $rootScope) {
-    $rootScope.PageType = "admin";
-  
-      if ($rootScope.UserType != "Admin") {
-        $location.path("/");
-        return;
-      }
+    function ($scope,  ajax, $location, $routeParams) {
+   
       var id = $routeParams.id;
       $scope.statuses = ["Active", "Inactive"];
       $scope.usertypes = ["Admin", "Manager", "Seller", "Customer"];

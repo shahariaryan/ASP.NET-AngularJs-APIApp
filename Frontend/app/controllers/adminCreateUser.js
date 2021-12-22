@@ -1,10 +1,5 @@
-app.controller("adminCreateUser", function ($scope, $http, ajax, $location, $rootScope) {
-    $rootScope.PageType = "admin";
-  
-    if ($rootScope.UserType != "Admin") {
-      //$location.path("/");
-      return;
-    }
+app.controller("adminCreateUser", function ($scope, ajax, $location) {
+   
   
     $scope.statuses = ["Valid", "Invalid", "Banned"];
   

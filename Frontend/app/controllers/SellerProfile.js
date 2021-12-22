@@ -1,4 +1,12 @@
-app.controller("SellerProfile", function ($scope, $http, ajax, $rootScope) {
+app.controller("SellerProfile", function ($scope, ajax, $rootScope) {
+    $rootScope.UserType = "Seller";
+    $rootScope.PageType = "seller";
+    
+   
+    $scope.id = $rootScope.UserId;
+    $scope.email = $rootScope.UserEmail;
+    $scope.phone = $rootScope.UserPhone;
+
 
     $scope.user=$rootScope;
     console.log($scope.user.UserName);

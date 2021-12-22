@@ -1,5 +1,4 @@
 app.controller("SellerAddPackage", function ($scope, ajax, $rootScope) {
-    // alert($rootScope.isUserLoggedIn);
   
     $scope.addproduct = function () {
       console.log($scope.Name);

@@ -2,35 +2,28 @@
     <div class="container-fluid">
         <div class="row bg-title">
             <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                <h4 class="page-title">Edit Profile</h4>
+                <h4 class="page-title">Update Profile</h4>
             </div>
         </div>
         <div class="col-md-8 col-xs-12">
             <div class="white-box">
                 <form class="form-horizontal form-material">
                     <div class="form-group">
-                        <label class="col-md-12">Name</label>
-                        <div class="col-md-12">
-                            <input type="text" ng-model="user.UserName" placeholder="Enter name" name="name"
-                                class="form-control form-control-line" required />
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-12">Email</label>
+                        <label class="col-md-12">Change Email</label>
                         <div class="col-md-12">
                             <input type="text" ng-model="user.UserEmail" placeholder="Email" name="email"
                                 class="form-control form-control-line" required />
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-md-12">Password</label>
+                        <label class="col-md-12">Change Password</label>
                         <div class="col-md-12">
                             <input type="text" ng-model="user.UserPassword" placeholder="Password" name="password"
                                 class="form-control form-control-line" required />
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-md-12">Phone</label>
+                        <label class="col-md-12">Change Phone</label>
                         <div class="col-md-12">
                             <input type="text" ng-model="user.UserPhone" placeholder="Phone" name="phone"
                                 class="form-control form-control-line" required />
@@ -39,7 +32,7 @@
                     <div class="form-group">
                         <div class="col-sm-12">
                             <input type="submit" ng-click="edit(user)" name="EditProfile" class="btn btn-success"
-                                value="Edit" />
+                                value="Update" />
                         </div>
                     </div>
                 </form>

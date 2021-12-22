@@ -16,9 +16,6 @@ namespace DAL
         List<T> GetSearchUsers(STRING search);
 
         T GetUser(ID id);
-
-       
-
     }
 
     public interface IRepo<T, ID, Search >
@@ -43,16 +40,6 @@ namespace DAL
         List<T> GetAll();
 
         T GetOrders(ID id);
-    }
-
-    public interface IRepos<T, ID>
-    {
-        
-        void EditUser(T us, ID id);
-
-        Array[] Dashboard(ID id);
-        
-
     }
 
     public interface IRepository<T, ST>
@@ -95,12 +82,20 @@ namespace DAL
         void DeleteVoucher(ID id);
 
     }
-
     public interface IReposAuditLog<T>
     {
         List<Auditlog> GetAllAuditLogs();
         void AddAuditLog(T a);
        
+
+    }
+    public interface IRepos<T, ID>
+    {
+
+        void EditUser(T us, ID id);
+
+        Array[] Dashboard(ID id);
+
 
     }
 

@@ -1,4 +1,4 @@
-app.controller("registration", function ($scope, $http, ajax, $location, $rootScope) {
+app.controller("registration", function ($scope, ajax, $location, $rootScope) {
     $rootScope.PageType = "admin";
     $scope.usertypes = ["Seller", "Customer"];
   

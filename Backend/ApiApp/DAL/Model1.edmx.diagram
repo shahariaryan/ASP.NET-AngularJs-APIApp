@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="839c1f3ce139496d8584e7e1454ffdac" Name="Diagram1">
+      <Diagram DiagramId="d70f908c829349f5a45d12e606483b01" Name="Diagram1">
         <EntityTypeShape EntityType="ApiAppModel.Account" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
         <EntityTypeShape EntityType="ApiAppModel.Action" Width="1.5" PointX="3.75" PointY="10.25" IsExpanded="true" />
         <EntityTypeShape EntityType="ApiAppModel.Auditlog" Width="1.5" PointX="6" PointY="15.625" IsExpanded="true" />
@@ -13,6 +13,7 @@
         <EntityTypeShape EntityType="ApiAppModel.Order" Width="1.5" PointX="3" PointY="18.25" IsExpanded="true" />
         <EntityTypeShape EntityType="ApiAppModel.Package" Width="1.5" PointX="3" PointY="22.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ApiAppModel.Rating" Width="1.5" PointX="5.25" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApiAppModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ApiAppModel.Token" Width="1.5" PointX="3" PointY="27" IsExpanded="true" />
         <EntityTypeShape EntityType="ApiAppModel.User" Width="1.5" PointX="0.75" PointY="14.5" IsExpanded="true" />
         <EntityTypeShape EntityType="ApiAppModel.Voucherentry" Width="1.5" PointX="5.25" PointY="23.75" IsExpanded="true" />

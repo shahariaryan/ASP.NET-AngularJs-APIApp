@@ -1,12 +1,7 @@
 app.controller(
     "adminDeleteVoucher",
-    function ($scope, $http, ajax, $location, $routeParams, $rootScope) {
-    $rootScope.PageType = "admin";
-  
-      if ($rootScope.UserType != "Admin") {
-        $location.path("/");
-        return;
-      }
+    function ($scope, ajax, $location, $routeParams) {
+   
       var id = $routeParams.id;
       ajax.get("https://localhost:44336/api/vouchers/" + id, success, error);
       function success(response) {

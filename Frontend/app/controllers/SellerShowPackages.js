@@ -1,4 +1,4 @@
-app.controller("SellerShowPackages", function ($scope, $http, ajax,$rootScope) {
+app.controller("SellerShowPackages", function ($scope, ajax,$rootScope) {
     ajax.get("https://localhost:44336/api/Package/GetAll/"+$rootScope.UserId, success, error);
     function success(response) {
       $scope.products = response.data;

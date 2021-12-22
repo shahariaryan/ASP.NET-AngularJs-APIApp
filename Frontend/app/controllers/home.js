@@ -1,6 +1,6 @@
 app.controller(
     "home",
-    function ($scope, $http, ajax, $location, $rootScope) {
+    function ($scope, $http,  $rootScope) {
       $rootScope.PageType = "home";
   
       console.log($rootScope.PageType);

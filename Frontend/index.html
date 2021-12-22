@@ -104,7 +104,7 @@
       ng-if="UserType === 'Admin' && PageType === 'admin'"
       ng-include="'views/inc/side_nav_admin.html'"
     ></div>
-    <div ng-view></div>
+    <div ng-view> </div>
 
     <!-- ADMIN LINKS -->
     <!-- javascripts -->
@@ -172,6 +172,23 @@
 <!-- Add Services here -->
 <script src="app/services/ajax.js"></script>
 <script src="app/services/interceptor.js"></script>
+<!--Seller controllers -->
+<script src="app/controllers/SellerHome.js"></script>
+<script src="app/controllers/SellerAddPackage.js"></script>
+<script src="app/controllers/SellerShowPackages.js"></script>
+<script src="app/controllers/SellerPackageEdit.js"></script>
+<script src="app/controllers/sellerViewNotices.js"></script>
+<script src="app/controllers/SellerShowOrder.js"></script>
+<script src="app/controllers/SellerProfile.js"></script>
+<script src="app/controllers/SellerDashboard.js"></script>
+
+<script src="app/controllers/home.js"></script>
+<script src="app/controllers/registration.js"></script>
+<script src="app/controllers/login.js"></script>
+<script src="app/controllers/logout.js"></script>
+
+
+<!-- Others -->
 
 <!-- ADMIN CONTROLLERS -->
 <script src="app/controllers/adminViewUsers.js"></script>
@@ -192,25 +209,3 @@
 <script src="app/controllers/adminEditComplain.js"></script>
 <script src="app/controllers/adminDeleteComplain.js"></script>
 <script src="app/controllers/adminHome.js"></script>
-
-
-<script src="app/controllers/home.js"></script>
-<script src="app/controllers/registration.js"></script>
-<script src="app/controllers/login.js"></script>
-<script src="app/controllers/logout.js"></script>
-
-
-
-<!--Seller controllers -->
-
-<script src="app/controllers/SellerHome.js"></script>
-<script src="app/controllers/SellerAddPackage.js"></script>
-<script src="app/controllers/SellerShowPackages.js"></script>
-<script src="app/controllers/SellerPackageEdit.js"></script>
-<script src="app/controllers/sellerViewNotices.js"></script>
-<script src="app/controllers/SellerShowOrder.js"></script>
-<script src="app/controllers/SellerProfile.js"></script>
-<script src="app/controllers/SellerDashboard.js"></script>
-
-<!-- Others -->
-

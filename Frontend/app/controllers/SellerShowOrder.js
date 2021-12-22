@@ -1,4 +1,4 @@
-app.controller("SellerShowOrder", function ($scope, $http, ajax,$rootScope) {
+app.controller("SellerShowOrder", function ($scope, ajax,$rootScope) {
     ajax.get("https://localhost:44336/api/Order/GetAll/" + $rootScope.UserId, success, error);
     function success(response) {
       $scope.orders = response.data;

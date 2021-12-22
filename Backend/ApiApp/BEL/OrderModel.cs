@@ -21,6 +21,7 @@ namespace BEL
         public System.DateTime createdat { get; set; }
         public string status { get; set; }
         public string user_name { get; set; }
+        public string package_packagename { get; set; }
 
         public virtual UserModel User { get; set; }
         public virtual PackageModel Package { get; set; }

@@ -1,10 +1,5 @@
-app.controller("adminCreateVoucher", function ($scope, $http, ajax, $location, $rootScope) {
-    $rootScope.PageType = "admin";
-  
-    if ($rootScope.UserType != "Admin") {
-      $location.path("/");
-      return;
-    }
+app.controller("adminCreateVoucher", function ($scope, ajax, $location, $rootScope) {
+   
     $scope.statuses = ["Active", "Inactive"];
   
     $scope.createVoucher = function (voucher) {

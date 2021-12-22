@@ -1,12 +1,7 @@
 app.controller(
     "adminEditComplain",
-    function ($scope, $http, ajax, $location, $routeParams, $rootScope) {
-    $rootScope.PageType = "admin";
-  
-      if ($rootScope.UserType != "Admin") {
-        $location.path("/");
-        return;
-      }
+    function ($scope, ajax, $location, $routeParams) {
+   
       var id = $routeParams.id;
     
       ajax.get("https://localhost:44336/api/complains/" + id, success, error);

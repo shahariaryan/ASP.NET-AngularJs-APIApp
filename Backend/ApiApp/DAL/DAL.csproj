@@ -95,6 +95,9 @@
     <Compile Include="SellerOrderRepo.cs" />
     <Compile Include="SellerPackageRepo.cs" />
     <Compile Include="SellerProfileRepo.cs" />
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Token.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

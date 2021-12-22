@@ -1,12 +1,7 @@
 app.controller(
     "adminViewAuditLog",
-    function ($scope, $http, ajax, $location, $rootScope) {
-    $rootScope.PageType = "admin";
-  
-      if ($rootScope.UserType != "Admin") {
-        $location.path("/");
-        return;
-      }
+    function ($scope, ajax) {
+    
       ajax.get("https://localhost:44336/api/auditlogs/all", success, error);
       function success(response) {
         $scope.auditlogs = response.data;

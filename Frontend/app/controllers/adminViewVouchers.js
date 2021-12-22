@@ -1,32 +1,22 @@
 app.controller(
-  "sellerViewNotices",
-  function ($scope, $http, ajax, $location, $rootScope) {
-  $rootScope.PageType = "seller";
-
-    if ($rootScope.UserType != "Seller") {
-      //$location.path("/");
-      return;
-    }
-    ajax.get("https://localhost:44336/api/notices/all", success, error);
+  "adminViewVouchers",
+  function ($scope, ajax) {
+ 
+    ajax.get("https://localhost:44336/api/vouchers/all", success, error);
     function success(response) {
-      $scope.notices = response.data;
-      $scope.notices.forEach((element) => {
-        var v = new Date(element.createdat);
-        element.date = v.toDateString();
-        element.time = v.toLocaleTimeString();
-      });
-      // console.log(response.data);
+      $scope.vouchers = response.data;
+      console.log(response.data);
     }
     function error(error) {}
 
     $scope.search = function () {
       if ($scope.searchText === "") {
-        ajax.get("https://localhost:44336/api/notices/all", success, error);
+        ajax.get("https://localhost:44336/api/vouchers/all", success, error);
       } else {
         ajax.get(
-          "https://localhost:44336/api/notices/search/" + $scope.searchText,
+          "https://localhost:44336/api/vouchers/search/" + $scope.searchText,
           function success(response) {
-            $scope.notices = response.data;
+            $scope.vouchers = response.data;
           },
           function (err) {
             console.log(err);

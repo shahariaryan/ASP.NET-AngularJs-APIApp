@@ -141,6 +141,11 @@ app.config(function($httpProvider){
   $httpProvider.interceptors.push("intercepror");
 });
 
+
+
+
+
+
 app.controller("myController", function ($rootScope) {
   $rootScope.isUserLoggedIn = false;
   $rootScope.PageType = "home";

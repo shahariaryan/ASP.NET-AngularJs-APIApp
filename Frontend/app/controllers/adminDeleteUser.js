@@ -1,12 +1,7 @@
 app.controller(
     "adminDeleteUser",
-    function ($scope, $http, ajax, $location, $routeParams, $rootScope) {
-    $rootScope.PageType = "admin";
+    function ($scope, ajax, $location, $routeParams) {
   
-      if ($rootScope.UserType != "Admin") {
-        $location.path("/");
-        return;
-      }
       var id = $routeParams.id;
       ajax.get("https://localhost:44336/api/users/" + id, success, error);
       function success(response) {

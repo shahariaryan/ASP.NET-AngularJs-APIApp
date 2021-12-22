@@ -1,9 +1,5 @@
-app.controller("adminActions", function ($scope, $http, ajax, $location, $route, $rootScope) {
-    if ($rootScope.UserType != "Admin") {
-      //$location.path("/");
-      return;
-    }
-    
+app.controller("adminActions", function ($scope, ajax,  $route, $rootScope) {
+   
     ajax.get("https://localhost:44336/api/users/all", success, error);
     function success(response) {
       $scope.users = response.data;
